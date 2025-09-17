@@ -1,6 +1,4 @@
-import React from 'react';
 import Square from './Square';
-import type { SquareProps } from './Square';
 import { calculateWinner } from './Game'; // We'll export calculateWinner from Game
 
 // Props for Board

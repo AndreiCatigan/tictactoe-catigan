@@ -1,18 +1,60 @@
-.square {
-  width: 50px;
-  height: 50px;
-  font-size: 24px;
-  border: 1px solid #999;
+/* Center the entire game on the page */
+html, body {
+  height: 100%;
+  margin: 0;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
+  justify-content: center; /* horizontal center */
+  align-items: center;     /* vertical center */
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+}
+
+.game {
+  display: flex;            /* children side by side */
+  flex-direction: row;      /* board + moves list */
+  align-items: flex-start;
+}
+
+.game-board {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
 }
 
 .board-row {
   display: flex;
 }
 
+.square {
+  width: 60px;
+  height: 60px;
+  font-size: 2rem;
+  border: 2px solid #333;
+  border-radius: 12px;      /* rounded corners */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin: 5px;               /* spacing between squares */
+  background-color: #f0f0f0;
+  user-select: none;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.square:hover {
+  background-color: #d0d0ff;
+}
+
+.square:active {
+  transform: scale(0.97);    /* click effect without moving */
+}
+
 .status {
   margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.game-info {
+  margin-left: 20px;
 }
