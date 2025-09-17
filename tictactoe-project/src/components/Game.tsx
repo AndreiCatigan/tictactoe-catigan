@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Board from './Board';
 
 // Export calculateWinner so Board can use it
