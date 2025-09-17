@@ -51,9 +51,11 @@ export default function Game() {
       <div className="game-board">
         <Board xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay} />
       </div>
-      <div className="game-info">
-        <ol>{moves}</ol>
+    <div className="moves-card">
+      <div className="moves-label">Moves List</div>
+        <ol className="moves-list">{moves}</ol>
       </div>
     </div>
+
   );
 }
